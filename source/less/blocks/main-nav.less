@@ -1,0 +1,71 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 38px;
+  right: 31px;
+  width: 20px;
+  height: 2px;
+  background-color: @black;
+  cursor: pointer;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: translateY(6px);
+  }
+
+  &::after {
+    transform: translateY(-6px);
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: list-item;
+  border-bottom: 1px solid @gray--light;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 27px  30px 27px 74px;
+  position: relative;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @black;
+
+  &--cart::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    top: 50%;
+    left: 30px;
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translateY(-50%);
+    filter: grayscale(100%); /*возможно добавить в примеси*/
+  }
+
+  &--cart:hover::after {
+    filter: grayscale(0);
+  }
+}

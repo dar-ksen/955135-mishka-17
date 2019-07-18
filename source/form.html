@@ -3,17 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Форма</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Форма</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="http://placehold.it/86x35" alt="Логотип магазина «Мишка»">
+      <img class="header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -44,25 +48,25 @@
 
       <fieldset class="form__block">
         <legend class="form__title">Тип</legend>
-        <input class="form__radio-input" type="radio" name="type" value="accessory" id="accessory" checked>
+        <input class="form__radio-input visually-hidden" type="radio" name="type" value="accessory" id="accessory" checked>
         <label class="form__radio-desc" for="accessory">Аксессуар для интерьера</label>
-        <input class="form__radio-input" type="radio" name="type" value="toy" id="toy">
+        <input class="form__radio-input visually-hidden" type="radio" name="type" value="toy" id="toy">
         <label class="form__radio-desc" for="toy">Детская игрушка</label>
       </fieldset>
 
       <fieldset class="form__block">
         <legend class="form__title">Цвет</legend>
-        <input class="form__checkbox-input" type="checkbox" name="white" id="color-white" checked>
+        <input class="form__checkbox-input visually-hidden" type="checkbox" name="white" id="color-white" checked>
         <label class="form__checkbox-desc" for="color-white">Белый</label>
-        <input class="form__checkbox-input" type="checkbox" name="grey" id="color-grey" checked>
+        <input class="form__checkbox-input visually-hidden" type="checkbox" name="grey" id="color-grey" checked>
         <label class="form__checkbox-desc" for="color-grey">Серый</label>
-        <input class="form__checkbox-input" type="checkbox" name="tifani" id="color-tifani">
+        <input class="form__checkbox-input visually-hidden" type="checkbox" name="tifani" id="color-tifani">
         <label class="form__checkbox-desc" for="color-tifani">«Тиффани»</label>
-        <input class="form__checkbox-input" type="checkbox" name="black" id="color-black">
+        <input class="form__checkbox-input visually-hidden" type="checkbox" name="black" id="color-black">
         <label class="form__checkbox-desc" for="color-black">Черный</label>
-        <input class="form__checkbox-input" type="checkbox" name="pink" id="color-pink">
+        <input class="form__checkbox-input visually-hidden" type="checkbox" name="pink" id="color-pink">
         <label class="form__checkbox-desc" for="color-pink">Розовый</label>
-        <input class="form__checkbox-input" type="checkbox" name="orange" id="color-orange">
+        <input class="form__checkbox-input visually-hidden" type="checkbox" name="orange" id="color-orange">
         <label class="form__checkbox-desc" for="color-orange">Оранжевый</label>
       </fieldset>
 
@@ -77,12 +81,11 @@
       </fieldset>
 
       <fieldset class="form__block">
-        <legend class="form__title visually-hidden">Обратная связь</legend>
+        <legend class="visually-hidden">Обратная связь</legend>
         <label class="form__feedback form__feedback--phone" for="user-phone">Тел</label>
-        <!--Я ввел дополнительный элемент для описания-->
         <input class="form__text-input" type="text" name="user-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="user-phone" required>
-        <label class="form__text-desc form__text-desc--email" for="user-email">E-mail</label>
-        <input class="feedback-input" type="email" name="user-email" placeholder="Ваш Email*" id="user-email" required>
+        <label class="form__feedback form__text-desc--email" for="user-email">E-mail</label>
+        <input class="form__text-input" type="email" name="user-email" placeholder="Ваш Email*" id="user-email" required>
         <label class="form__feedback" for="user-message">Доп</label>
         <textarea class="form__textarea" name="user-message" rows="6" placeholder="Опишите все ваши пожелания к заказу" id="user-message"></textarea>
       </fieldset>
@@ -94,11 +97,17 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="footer">
     <div class="social">
-      <a class="social__link" href="https://www.instagram.com/htmlacademy"><img class="social__img" src="http://placehold.it/22x21" alt="Логотип инстаграмма"></a>
-      <a class="social__link" href="https://www.facebook.com/htmlacademy"><img class="social__img" src="http://placehold.it/22x21" alt="Логотип фейсбука"></a>
-      <a class="social__link" href="https://twitter.com/htmlacademy_ru"><img class="social__img" src="http://placehold.it/22x21" alt="Логотип твитера"></a>
+      <a class="social__link" href="https://www.instagram.com/htmlacademy">
+        <img class="social__img" src="img/icon-insta.svg" alt="Логотип инстаграмма">
+      </a>
+      <a class="social__link" href="https://www.facebook.com/htmlacademy">
+        <img class="social__img" src="img/icon-fb.svg" alt="Логотип фейсбука">
+      </a>
+      <a class="social__link" href="https://twitter.com/htmlacademy_ru">
+        <img class="social__img" src="img/icon-twitter.svg" alt="Логотип твитера">
+      </a>
     </div>
     <div class="copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
