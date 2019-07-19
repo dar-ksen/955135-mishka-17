@@ -3,115 +3,97 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="http://placehold.it/86x35" alt="Логотип магазина «Мишка»">
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrap">
-        <ul class="main-nav__site-list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__user-list user-list">
-          <li class="user-list__item">
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label>
-                <input class="search-form__input" type="search" placeholder="Поиск по сайту">
-                <span class="visually-hidden">Поиск</span>
-              </label>
-            </form>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__cart" href="#">Корзина: <span>пока пуста</span></a>
-          </li>
-        </ul>
-      </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+            <span class="visually-hidden"></span>
+          </form>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main class="page-main">
 
-    <h1 class="visually-hidden">Интернет магазин «Мишка»</h1>
+    <!--<h1 class="visually-hidden">Интернет магазин «Мишка»</h1>-->
 
-    <section class="offer">
-      <!--Уточнить как лучше назвать-->
-      <h2 class="offer__slogan">Милые штуки ручной работы для дома</h2>
-      <div class="offer__item offer__item--interior">
-        <h3 class="offer__item-title">Предметы интерьера</h3>
-      </div>
-      <div class="offer__item offer__item--toys">
-        <h3 class="offer__item-title">Детские игрушки</h3>
-      </div>
+    <header class="sub-header sub-header--main">
+      <h1 class="sub-header__slogan">Милые штуки ручной работы для дома</h1>
+      <a class="sub-header__link sub-header__link--interior" href="#">
+        <span class="sub-header__text">Предметы интерьера</span>
+      </a>
+      <a class="sub-header__link sub-header__link--toys" href="#">
+        <span class="sub-header__text">Детские игрушки</span>
+      </a>
+    </header>
+
+    <section class="week-goods">
+      <h2 class="week-goods__title">Вязаные корзинки</h2>
+      <h3 class="week-goods__subtitle">Товар недели</h3>
+      <p class="week-goods__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <table class="week-goods__table">
+        <tr class="week-goods__line">
+          <th class="week-goods__property">Цвет:</th>
+          <td class="week-goods__desc">«Тиффани»/серый</td>
+        </tr>
+        <tr class="week-goods__line">
+          <th class="week-goods__property">Диаметр:</th>
+          <td class="week-goods__desc">25 см</td>
+        </tr>
+        <tr class="week-goods__line">
+          <th class="week-goods__property">Высота:</th>
+          <td class="week-goods__desc">15 см</td>
+        </tr>
+      </table>
+      <img class="week-goods__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки">
+      <p class="week-goods__count">Цена: 990 руб.</p>
+      <a class="btn week-goods__btn" href="#">Заказать</a>
     </section>
 
     <section class="features">
-      <h2 class="features__title">Вязаные корзинки</h2>
-      <p class="features__subtitle">Товар недели</p>
-      <p class="features__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <table class="features__table specification">
-        <tr>
-          <td class="specification__property">Цвет:</td>
-          <td class="specification__desc">«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <td class="specification__property">Диаметр:</td>
-          <td class="specification__desc">25 см</td>
-        </tr>
-        <tr>
-          <td class="specification__property">Высота:</td>
-          <td class="specification__desc">15 см</td>
-        </tr>
-      </table>
-      <img class="features__img" src="http://placehold.it/260x315" alt="Вязанные корзинки">
-      <p class="features__count">Цена: 990 руб.</p>
-      <a class="btn features__btn" href="#">Заказать</a>
-    </section>
-
-    <section class="about">
-      <h2 class="about__title">Коротко о нас</h2>
-      <ul class="about__list">
-        <li class="about__item about__item--ecology">
-          <p class="about__text">Экологически чистые материалы</p>
-        </li>
-        <li class="about__item about__item--count">
-          <p class="about__text">Скандинавский стиль по российской цене</p>
-        </li>
-        <li class="about__item about__item--like">
-          <p class="about__text">Увеличивает лайки на фотографиях</p>
-        </li>
-        <li class="about__item about__item--features">
-          <p class="about__text">Связано вручную с любовью и умилением</p>
-        </li>
-        <li class="about__item about__item--support">
-          <p class="about__text">Поддержка отечественного производителя</p>
-        </li>
-        <li class="about__item about__item--packing">
-          <p class="about__text">Поставляется в подарочной упаковке</p>
-        </li>
+      <h2 class="features__title">Коротко о нас</h2>
+      <ul class="features__list">
+        <li class="features__item features__item--ecology">Экологически чистые материалы</li>
+        <li class="features__item features__item--count"> Скандинавский стиль по российской цене</li>
+        <li class="features__item features__item--like"> Увеличивает лайки на фотографиях</li>
+        <li class="features__item features__item--features"> Связано вручную с любовью и умилением</li>
+        <li class="features__item features__item--support"> Поддержка отечественного производителя</li>
+        <li class="features__item features__item--packing"> Поставляется в подарочной упаковке</li>
       </ul>
     </section>
 
     <section class="reviews">
-      <h2 class="reviews title">Отзывы</h2>
-      <div class="review">
-        <!--Как лучше оформить? Как слайдер?-->
-        <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-        <p class="review__author">Анастасия Красильникова</p>
-        <p class="review__mail">@misssssiskras</p>
-        <!--Поискать как оформляется почта. Может как ссылка-->
-        <button class="reviews__btn reviews__btn__prev">Назад</button>
-        <button class="reviews__btn reviews__btn__next">Вперёд</button>
+      <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__item">
+        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+        <p class="reviews__author">Анастасия Красильникова</p>
+        <p class="reviews__nickname">@misssssiskras</p>
+        <a class="reviews__slide-btn reviews__slide-btn--prev"><span class="visually-hidden">Назад</span></a>
+        <a class="reviews__slide-btn reviews__slide-btn--next"><span class="visually-hidden">Вперед</span></a>
       </div>
       <a class="btn reviews__btn" href="#">Написать</a>
     </section>
@@ -119,31 +101,30 @@
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
       <dl class="contacts__list">
-        <!--Или лучше сделать через таблицу, а не список определений.-->
         <dt class="contacts__term">e-mail</dt>
-        <dd class="contacts__desc"><a class="mail-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+        <dd class="contacts__desc"><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
         <dt class="contacts__term">адрес:</dt>
-        <dd class="contacts__desc">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</dd>
+        <dd class="contacts__desc contacts__desc--adress">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
       </dl>
-      <div class="contacts__map map">
-        <img class="map-image" src="http://placehold.it/320x457" alt="Наше местонахождение">
+      <div class="contacts__map">
+        <img class="contacts__map-image" width="322" height="457" src="img/map-mobile@1x.jpg" alt="Наше местонахождение">
       </div>
       <a class="btn contacts__btn" href="#">Напишите нам</a>
     </section>
   </main>
 
-  <footer class="page-footer">
-    <ul class="social-links">
-      <li class="social-links__item">
-        <a class="social-links__link" href="#"><img class="social-links__img" src="http://placehold.it/22x21" alt="Логотип инстаграмма"></a>
-      </li>
-      <li class="social-links__item">
-        <a class="social-links__link" href="#"><img class="social-links__img" src="http://placehold.it/22x21" alt="Логотип фейсбука"></a>
-      </li>
-      <li class="social-links__item">
-        <a class="social-links__link" href="#"><img class="social-links__img" src="http://placehold.it/22x21" alt="Логотип твитера"></a>
-      </li>
-    </ul>
+  <footer class="footer">
+    <div class="social">
+      <a class="social__link" href="https://www.instagram.com/htmlacademy">
+        <img class="social__img" src="img/icon-insta.svg" alt="Логотип инстаграмма">
+      </a>
+      <a class="social__link" href="https://www.facebook.com/htmlacademy">
+        <img class="social__img" src="img/icon-fb.svg" alt="Логотип фейсбука">
+      </a>
+      <a class="social__link" href="https://twitter.com/htmlacademy_ru">
+        <img class="social__img" src="img/icon-twitter.svg" alt="Логотип твитера">
+      </a>
+    </div>
     <div class="copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>

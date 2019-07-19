@@ -1,0 +1,81 @@
+.week-goods {
+  position: relative;
+  width: auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 320px 7px;
+    background-position-x: 0;
+    background-repeat: repeat-x;
+  }
+}
+
+.week-goods__title {
+  padding-top: 32px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.week-goods__subtitle {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @turquoise;
+}
+
+.week-goods__text {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.week-goods__table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.week-goods__line {
+  display: block;
+  border-bottom: 1px solid @gray--light;
+}
+
+.week-goods__property {
+  font-weight: 400;
+  text-align: left;
+  width: 100px;
+}
+
+.week-goods__img {
+  align-self: center;
+  width: 260px;
+  height: 315px;
+  margin-bottom: 30px;
+}
+
+.week-goods__count {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.week-goods__btn {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  width: 280px;
+}
