@@ -1,8 +1,9 @@
 body {
+  min-width: 320px;
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 1.6em;
+  line-height: 1.6;
   font-weight: 400;
   color: @black--light;
   background-color: @white;
@@ -10,4 +11,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    font-size: 17px;
+  }
 }

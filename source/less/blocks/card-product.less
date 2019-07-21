@@ -1,13 +1,13 @@
 .card-product {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 30px;
-  padding-top: 30px;
+  margin: 30px 0;
 }
 
 .card-product__item {
+  box-sizing: border-box;
   width: 260px;
+  margin: 0 auto;
   margin-bottom: 30px;
+  border: 1px solid @gray--light;
 }
 
 .card-product__img {
@@ -15,9 +15,8 @@
 }
 
 .card-product__title {
-  margin: 0;
+  margin: 0 30px;
   margin-bottom: 20px;
-  padding-left: 28px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
@@ -29,10 +28,8 @@
 
 .card-product__desc {
   position: relative;
-  margin: 0;
-  margin-left: 30px;
+  margin: 0 30px;
   padding-bottom: 19px;
-  width: 204px;
   font-size: 13px;
   line-height: 30px;
   border-bottom: 1px solid @gray--light;
@@ -43,7 +40,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 1px solid @gray--light;
 }
 
 .card-product__price {

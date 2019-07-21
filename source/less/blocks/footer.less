@@ -1,6 +1,25 @@
 .footer {
+  margin: 0;
   padding: 0 30px;
-  display: flex;
-  flex-wrap: wrap;
   background-color: @white--darken;
+}
+
+.footer__logo {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    height: 142px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  .footer__logo {
+    display: flex;
+  }
+
 }
