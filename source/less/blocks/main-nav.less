@@ -44,6 +44,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
   &--news {
     display: none;
   }
@@ -109,20 +110,21 @@
     padding: 25px 0 0 50px;
   }
 
-.main-nav__link {
-  padding-top: 31px;
-  padding-bottom: 31px;
-  &--cart {
-    padding-right: 50px;
-  }
-}
+  .main-nav__link {
+    padding-top: 31px;
+    padding-bottom: 31px;
 
-.main-nav__text {
-  padding-top: 25px;
-  padding-right: 50px;
-  display: block;
-  order: 2;
-}
+    &--cart {
+      padding-right: 50px;
+    }
+  }
+
+  .main-nav__text {
+    padding-top: 25px;
+    padding-right: 50px;
+    display: block;
+    order: 2;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -147,6 +149,7 @@
       display: flex;
       order: -2;
     }
+
     &--news {
       display: flex;
     }

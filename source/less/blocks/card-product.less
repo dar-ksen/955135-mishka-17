@@ -1,50 +1,54 @@
 .card-product {
   margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-product__item {
+  margin-bottom: 30px;
   box-sizing: border-box;
   width: 260px;
-  margin: 0 auto;
-  margin-bottom: 30px;
   border: 1px solid @gray--light;
 }
 
-.card-product__img {
-  margin-bottom: 30px;
+.card-product__link-img picture {
+  display: flex; //чтобы убрать лишний под ссылкой. Спросить как лучше это сделать
 }
 
-.card-product__title {
+.card-product__img {
+  width: 260px;
+  height: 195px;
+}
+
+.card-product__wrap {
   margin: 0 30px;
-  margin-bottom: 20px;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
 }
 
 .card-product__link {
   color: @black;
 }
 
+.card-product__title {
+  margin: 30px 0 20px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
 .card-product__desc {
-  position: relative;
-  margin: 0 30px;
-  padding-bottom: 19px;
+  margin-bottom: 25px;
   font-size: 13px;
-  line-height: 30px;
-  border-bottom: 1px solid @gray--light;
 }
 
 .card-product__price-wrap {
-  padding: 20px 28px;
+  padding: 25px 0 30px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  border-top: 1px solid @gray--light;
 }
 
 .card-product__price {
   font-size: 15px;
-  line-height: 24px;
   font-weight: 700;
 }
 
@@ -56,4 +60,66 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   filter: grayscale(100%);
+}
+
+@media (min-width: @tablet-width) {
+  .card-product {
+    margin: 50px 0;
+  }
+
+  .card-product__item {
+    margin-bottom: 50px;
+    display: flex;
+    width: 668px;
+  }
+
+  .card-product__img {
+    width: 334px;
+    height: 334px;
+  }
+
+  .card-product__wrap {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-product__title {
+    font-size: 20px;
+  }
+
+  .card-product__desc {
+    font-size: 15px;
+  }
+
+  .card-product__price-wrap {
+    margin-top: auto;
+  }
+
+  .card-product__price {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card-product {
+    width: 1050px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .card-product__item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+  }
+
+
+  .card-product__img {
+    width: 316px;
+    height: 462px;
+  }
 }
