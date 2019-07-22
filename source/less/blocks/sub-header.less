@@ -75,7 +75,7 @@
 @media (min-width: @tablet-width) {
   .sub-header {
     position: relative;
-    top: -51px;
+    top: -50px;
     z-index: -1;
 
     &--main {
@@ -105,17 +105,13 @@
     font-size: 43px;
   }
 
+  .sub-header__wrap {
+    margin: 0 50px;
+  }
+
   .sub-header__link {
-    width: 40%;
-    flex-grow: 1;
-
-    &--interior {
-      margin-left: 50px;
-    }
-
-    &--toys {
-      margin-right: 50px;
-    }
+    box-sizing: border-box;
+    width: 50%;
   }
 }
 
