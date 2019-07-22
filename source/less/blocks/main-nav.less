@@ -1,10 +1,12 @@
 .main-nav__logo-wrap {
   position: relative;
+  display: flex;
   border-bottom: 1px solid #ececec;
 }
 
 .main-nav__logo {
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   padding: 22px 0;
 }
@@ -69,7 +71,7 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    max-width: 950px; //Нижнее подчеркивание сделать псевдоэлементом растянуютым на весь экран
+    max-width: 950px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +86,7 @@
 
   .main-nav__logo {
     padding: 22px 50px;
+    justify-content: flex-start;
   }
 
   .main-nav__toggle {
@@ -100,6 +103,10 @@
       display: flex;
       order: 1;
     }
+  }
+
+  .main-nav__item {
+    border: none;
   }
 
   .main-nav__list--navigation .main-nav__item {
