@@ -3,9 +3,13 @@
 }
 
 .header__logo {
-  display: flex;
-  justify-content: center;
-  padding: 27px 0;
-  border-top: 1px solid @gray--light;
-  border-bottom: 1px solid @gray--light;
+  width: 86px;
+  height: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .header__logo {
+    width: 112px;
+    height: 46px;
+  }
 }

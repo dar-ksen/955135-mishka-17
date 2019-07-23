@@ -1,8 +1,6 @@
 .reviews {
   position: relative;
-  padding: 0 30px;
-  display: flex;
-  flex-direction: column;
+  padding: 35px 30px 45px;
 
   &::after {
     content: "";
@@ -20,41 +18,37 @@
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 35px;
   font-size: 25px;
-  line-height: 30px;
   font-weight: 700;
   color: @black;
 }
 
-.reviews__item {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .reviews__text {
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 0 38px;
 }
 
 .reviews__author {
-  margin: 0;
+  margin: 0 0 20px;
   font-size: 17px;
-  line-height: 24px;
   color: @black;
   font-weight: 700;
 }
 
 .reviews__nickname {
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   font-size: 17px;
-  line-height: 30px;
+}
+
+.reviews__menu {
+  margin: 0 0 38px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .reviews__slide-btn {
+  box-sizing: border-box;
   position: relative;
-  margin-bottom: 38px;
   width: 50%;
   height: 52px;
   background-color: transparent;
@@ -86,8 +80,75 @@
 }
 
 .reviews__btn {
+  max-width: 260px;
   margin: 0 auto;
-  margin-bottom: 40px;
   padding: 20px 0;
-  width: 260px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding: 65px 50px 90px;
+
+    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+
+    &::after {
+      height: 17px;
+      background-size: auto 17px;
+    }
+  }
+
+  .reviews__title {
+    font-size: 43px;
+    margin-bottom: 40px;
+  }
+
+  .reviews__text {
+    margin-bottom: 65px;
+  }
+
+  .reviews__menu {
+    position: absolute;
+    right: 50px;
+    bottom: 140px;
+    width: 185px;
+  }
+
+  .reviews__slide-btn {
+    border: none;
+  }
+
+  .reviews__btn {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    width: 175px;
+    margin: 0;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    margin: 0 50px;
+    padding: 65px 100px 90px 175px;
+
+    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+
+    &::after {
+      height: 23px;
+      background-size: auto 23px;
+    }
+  }
+
+  .reviews__title {
+    font-size: 53px;
+  }
+
+  .reviews__menu {
+    right: 0;
+  }
+
+  .reviews__btn {
+    right: 0;
+  }
 }
