@@ -1,4 +1,5 @@
 .form {
+  margin: 0 auto;
   padding: 30px 30px;
 }
 
@@ -9,6 +10,7 @@
 }
 
 .form__title {
+  box-sizing: border-box;
   width: 100%;
   padding: 20px 0;
   position: relative;
@@ -78,9 +80,15 @@
   }
 }
 
+.form__checkbox-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .form__checkbox-desc {
+  box-sizing: border-box;
   display: block;
-  width: 100px;
+  width: 100%;
   position: relative;
   padding: 20px 0 20px 60px;
   font-size: 17px;
@@ -101,7 +109,6 @@
 }
 
 .form__text-desc {
-  width: 100%;
   position: relative;
   margin-bottom: 17px;
   font-size: 17px;
@@ -172,8 +179,26 @@
     }
   }
 
+  .form__radio-desc {
+    font-size: 19px;
+  }
+
   .form__checkbox-wrap {
-    display: flex;
-    flex-wrap: wrap;
+    width: 80%; //Без задания ширины этот блок .form__title ужимает невзирая на его ширину
+  }
+
+  .form__checkbox-desc {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__title {
+    width: 175px;
+    padding-left: 75px;
+  }
+
+  .form__checkbox-desc {
+    width: 100/3%;
   }
 }
