@@ -1,15 +1,19 @@
 .header {
   position: relative;
+  background-color: @white--dark;
 }
 
 .header__logo {
   width: 86px;
   height: 35px;
-}
 
-@media (min-width: @tablet-width) {
-  .header__logo {
+  @media @tablet {
     width: 112px;
     height: 46px;
+  }
+
+  @media @desktop {
+    width: 149px;
+    height: 72px;
   }
 }

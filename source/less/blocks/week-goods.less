@@ -38,25 +38,18 @@
 }
 
 .week-goods__header {
-  max-width: 290px;
   margin: 0 auto 30px;
 
   @media @tablet {
-    @media (min-width: 680px) {
-      max-width: none;
-      margin-bottom: 50px;
-      display: flex;
-      align-items: center;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
   }
 
   @media @desktop {
-    max-width: none;
     margin-bottom: 60px;
-    display: flex;
-    align-items: center;
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
@@ -68,9 +61,7 @@
   font-weight: 700;
 
   @media @tablet {
-    @media (min-width: 680px) {
-      font-size: 43px;
-    }
+    font-size: 43px;
   }
 
   @media @desktop {
@@ -86,33 +77,27 @@
   color: @turquoise;
 
   @media @tablet {
-    @media (min-width: 680px) {
-      font-size: 17px;
-      width: 80px;
-      margin-right: 25px;
-      text-align: center;
-    }
+    font-size: 17px;
+    width: 80px;
+    margin-right: 25px;
+    text-align: center;
   }
 
   @media @desktop {
-    width: 80px;
-    text-align: center;
     margin: 0 50px;
   }
 }
 
 .week-goods__content-wrap {
-  max-width: 290px;
   margin: 0 auto;
 
   @media @tablet {
-    @media (min-width: 680px) {
-      margin-left: 0;
-    }
+    max-width: 290px;
+    margin-left: 0;
   }
 
   @media @desktop {
-    margin-left: 175/1050*100%;//или лучше записать 16,666%?
+    margin-left: 16.666%;
   }
 }
 
@@ -123,13 +108,15 @@
 }
 
 .week-goods__table {
-  margin-bottom: 30px;
+  max-width: 290px;
+  margin: 0 auto 30px;
   font-size: 15px;
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
 
   @media @tablet {
+    max-width: none;
+    width: 100%;
     margin: 0 0 54px;
   }
 
@@ -159,13 +146,11 @@
   margin: 0 auto 30px;
 
   @media @tablet {
-    @media (min-width: 680px) {
-      position: absolute;
-      margin: 0;
-      right: 50px;
-      bottom: 45px;
-      z-index: -1;
-    }
+    position: absolute;
+    margin: 0;
+    right: 50px;
+    bottom: 45px;
+    z-index: -1;
   }
 
   @media @desktop {
@@ -194,5 +179,7 @@
 }
 
 .week-goods__btn {
+  max-width: 290px;
+  margin: 0 auto;
   padding: 20px 0;
 }

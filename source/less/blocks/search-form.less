@@ -1,10 +1,21 @@
 .search-form {
   position: relative;
   display: block;
+  margin: 0 auto;
+  max-width: 290px;
+  padding: 26px 0 26px 74px;
+
+  @media @tablet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 85px;
+    height: 89px;
+  }
 }
 
 .search-form__input {
-  padding: 26px 0 26px 74px;
   font: inherit;
   font-size: 17px;
   font-weight: 700;
@@ -13,6 +24,10 @@
 
   &::placeholder {
     color: @black;
+  }
+
+  @media @tablet {
+    display: none;
   }
 }
 
@@ -24,27 +39,8 @@
   height: 20px;
   border: none;
   transform: translateY(-50%);
-}
 
-@media (min-width: @tablet-width) {
-  .search-form {
-    box-sizing: border-box;
-    width: 85px;
-    height: 89px;
-    border-right: 1px solid #ececec;
-  }
-
-  .search-form__input {
-    display: none;
-  }
-
-  .search-form__btn {
+  @media @tablet {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    border: none;
-    transform: translate(-50%, -50%);
   }
 }

@@ -7,6 +7,7 @@
   @media @tablet {
     padding-top: 55px;
     padding-bottom: 60px;
+
     &::after {
       content: "";
       position: absolute;
@@ -21,6 +22,7 @@
   @media @desktop {
     padding-top: 55px;
     padding-bottom: 105px;
+
     &::after {
       content: "";
       position: absolute;
@@ -65,9 +67,7 @@
   flex-wrap: wrap;
 
   @media @tablet {
-    @media (min-width: 768px) {
-      max-width: 668px;
-    }
+    max-width: 668px;
   }
 
   @media @desktop {
@@ -84,6 +84,7 @@
 .contacts__desc {
   max-width: 184px;
   margin: 0 0 30px;
+
   @media @tablet {
     max-width: none;
     width: 255px;
@@ -107,6 +108,7 @@
 
 .contacts__map {
   margin: 0 -30px 40px;
+  text-align: center;
 
   @media @tablet {
     margin: 0 -50px 55px;
@@ -121,14 +123,24 @@
 }
 
 .contacts__map-image {
-  width: 100%;
-  height: auto;
+  width: 320px;
+  height: 457px;
+
+  @media @tablet {
+    width: 768px;
+    height: 457px;
+  }
+  @media @desktop {
+    width: 525px;
+    height: 457px;
+  }
 }
 
 .contacts__btn {
   max-width: 230px;
   margin: 0 auto;
   padding: 20px 0;
+
   @media @desktop {
     margin: 0;
   }
