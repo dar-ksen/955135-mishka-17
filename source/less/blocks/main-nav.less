@@ -1,6 +1,8 @@
 .main-nav {
+  position: relative;
   max-width: 1300px;
   margin: 0 auto;
+  z-index: 2;
 
   @media @tablet {
     display: flex;
@@ -11,7 +13,6 @@
 }
 
 .main-nav__logo-wrap {
-  background-color: @white;
   order: 1;
   position: relative;
   display: flex;
@@ -79,7 +80,6 @@
 }
 
 .main-nav__nav {
-  background-color: @white;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -87,15 +87,12 @@
   @media @tablet {
     padding-left: 50px;
     display: flex;
-  }
-
-  @media @tablet-only {
-    background-color: transparent;
     order: 3;
   }
 
   @media @desktop {
-    border-bottom: 1px solid @gray--light;
+    order: -1;
+    border-right: 1px solid @gray--light;
   }
 }
 
@@ -127,7 +124,6 @@
 }
 
 .main-nav__menu {
-  background-color: @white;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -136,7 +132,7 @@
     order: 2;
     display: flex;
     padding-right: 50px;
-    border-bottom: 1px solid @gray--light;
+    border-left: 1px solid @gray--light;
   }
 }
 
@@ -148,7 +144,6 @@
 
     &--search {
       border-right: 1px solid @gray--light;
-      border-left: 1px solid @gray--light;
     }
   }
 }
@@ -187,7 +182,6 @@
 }
 
 .main-nav__text {
-  background-color: @white--dark;
   display: none;
   margin: 0;
 

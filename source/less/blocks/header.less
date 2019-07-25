@@ -1,6 +1,23 @@
 .header {
   position: relative;
-  background-color: @white--dark;
+
+  @media @tablet {
+    background-color: @white--dark;
+    &--inner {
+      background-color: @white--darken;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 89px;
+      width: 100%;
+      border-bottom: 1px solid @gray--light;
+      background-color: @white;
+      z-index: 1;
+    }
+  }
 }
 
 .header__logo {

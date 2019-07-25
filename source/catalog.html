@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--inner">
     <nav class="main-nav">
       <div class="main-nav__logo-wrap">
         <a class="main-nav__logo header__logo" href="index.html">
@@ -24,33 +24,33 @@
         </button>
       </div>
 
-      <ul class="main-nav__list main-nav__list--navigation">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+      <ul class="main-nav__nav">
+        <li class="main-nav__nav-item">
+          <a class="main-nav__nav-link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        <li class="main-nav__nav-item">
+          <a class="main-nav__nav-link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
 
-      <ul class="main-nav__list main-nav__list--menu">
-        <li class="main-nav__item">
+      <ul class="main-nav__menu">
+        <li class="main-nav__menu-item main-nav__menu-item--search">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <button class="search-form__btn" type="submit"></button>
             <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
           </form>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+        <li class="main-nav__menu-item">
+          <a class="main-nav__menu-link main-nav__menu-link--cart" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
 
-      <ul class="main-nav__list main-nav__list--news">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Новые поступления</a>
+      <ul class="main-nav__news">
+        <li class="main-nav__news-item">
+          <a class="main-nav__news-link" href="#">Новые поступления</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Распродажа</a>
+        <li class="main--nav__news-item">
+          <a class="main-nav__news-link" href="#">Распродажа</a>
         </li>
       </ul>
       <p class="main-nav__text">Бесплатная доставка по России</p>
@@ -126,38 +126,46 @@
     </div>
 
     <section class="video">
-      <h2 class="video__title">Процесс производства</h2>
-      <div class="video__content-wrap">
-        <img class="video__content" src="img/video-mobile@1x.jpg">
-        <button class="video__control-btn" aria-label="Запустить видео"></button>
+      <div class="video__wrap">
+        <h2 class="video__title">Процесс производства</h2>
+        <div class="video__content-wrap">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
+                <img class="video__content" src="img/video-mobile@1x.jpg">
+              </picture>
+              <button class="video__control-btn"><span class="visually-hidden">Запустить видео</span></button>
+            </div>
+            <div class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</div>
+            <a class="video__btn btn" href="#">Сделать заказ</a>
       </div>
-      <div class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</div>
-      <a class="video__btn btn" href="#">Сделать заказ</a>
     </section>
 
   </main>
 
 
   <footer class="footer">
-    <a class="footer__logo" href="index.html">
-      <img class="footer__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
-    </a>
-    <div class="social">
-      <a class="social__link" href="https://www.instagram.com/htmlacademy">
-        <img class="social__img" src="img/icon-insta.svg" alt="Логотип инстаграмма">
+    <div class="footer__wrap">
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
       </a>
-      <a class="social__link" href="https://www.facebook.com/htmlacademy">
-        <img class="social__img" src="img/icon-fb.svg" alt="Логотип фейсбука">
-      </a>
-      <a class="social__link" href="https://twitter.com/htmlacademy_ru">
-        <img class="social__img" src="img/icon-twitter.svg" alt="Логотип твитера">
-      </a>
-    </div>
-    <div class="copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="copyright__text">Разработано</span>
-        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTMLAcademy">
-      </a>
+      <div class="social">
+        <a class="social__link" href="https://www.instagram.com/htmlacademy">
+          <img class="social__img" src="img/icon-insta.svg" alt="Логотип инстаграмма">
+        </a>
+        <a class="social__link" href="https://www.facebook.com/htmlacademy">
+          <img class="social__img" src="img/icon-fb.svg" alt="Логотип фейсбука">
+        </a>
+        <a class="social__link" href="https://twitter.com/htmlacademy_ru">
+          <img class="social__img" src="img/icon-twitter.svg" alt="Логотип твитера">
+        </a>
+      </div>
+      <div class="copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">Разработано</span>
+          <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTMLAcademy">
+        </a>
+      </div>
     </div>
   </footer>
 
