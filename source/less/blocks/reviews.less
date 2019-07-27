@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  padding-top: 35px;
+  padding-top: 30px;
   padding-bottom: 45px;
   .container;
 
@@ -19,7 +19,7 @@
 
   @media @tablet {
     padding-top: 65px;
-    padding-bottom: 90px;
+    padding-bottom: 100px;
     background: url("../img/review@1x.jpg") 0 0 no-repeat;
 
     &::after {
@@ -29,8 +29,8 @@
   }
 
   @media @desktop {
-    padding-top: 65px;
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 155px;
     background: url("../img/review@1x.jpg") 0 0 no-repeat;
     background-position-x: 50px;
 
@@ -44,18 +44,18 @@
 }
 
 .reviews__title {
-  margin: 0;
+  margin: 0 0 15px;
   font-size: 25px;
   font-weight: 700;
   color: @black;
 
   @media @tablet {
-    font-size: 43px;
     margin-bottom: 40px;
+    font-size: 43px;
   }
 
   @media @desktop {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     margin-left: 175/1050*100%;
     font-size: 53px;
   }
@@ -68,22 +68,28 @@
 }
 
 .reviews__text {
-  margin: 0 0 38px;
+  margin: 0 0 25px;
+  font-size: 15px;
+  line-height: 30px;
 
   @media @tablet {
-    margin-bottom: 65px;
+    font-size: 17px;
+    margin-bottom: 60px;
+  }
+  @media @desktop {
+    margin: 0 105px 35px 0;
   }
 }
 
 .reviews__author {
-  margin: 0 0 20px;
+  margin: 0 0 5px;
   font-size: 17px;
   color: @black;
   font-weight: 700;
 }
 
 .reviews__nickname {
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   font-size: 17px;
 }
 
@@ -95,15 +101,15 @@
   @media @tablet {
     position: absolute;
     right: 50px;
-    bottom: 140px;
-    width: 185px;
+    bottom: 95px;
+    width: 175px;
   }
 
   @media @desktop {
     position: absolute;
     right: 50px;
-    bottom: 140px;
-    width: 185px;
+    bottom: 150px;
+    width: 175px;
   }
 }
 
@@ -125,7 +131,21 @@
     background-image: url("../img/icon-left-arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    transition: 0.2s linear;
   }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
 
   &--prev::after {
     transform: translate(-50%, -50%);
@@ -151,7 +171,7 @@
 .reviews__btn {
   max-width: 260px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 15px 0;
 
   @media @tablet {
     position: absolute;

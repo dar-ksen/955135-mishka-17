@@ -10,6 +10,18 @@
     justify-content: space-between;
     align-items: center;
   }
+//Таким же образом оформить toggle
+  @media @mobile-only {
+    &--close .main-nav__nav,
+    &--close .main-nav__menu {
+      display: none;
+    }
+
+    &--nojs .main-nav__nav,
+    &--nojs .main-nav__menu {
+      display: block;
+    }
+  }
 }
 
 .main-nav__logo-wrap {
@@ -19,12 +31,14 @@
   border-bottom: 1px solid @gray--light;
 
   @media @tablet {
+    height: 90px;
+    width: 40%;
     flex-grow: 1;
-    width: 48%;
+    border: none;
   }
 
   @media @desktop {
-    width: 25%;
+    width: 250px;
   }
 }
 
@@ -36,10 +50,13 @@
   @media @tablet {
     padding: 0 0 0 50px;
     width: auto;
-    height: 89px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  @media @desktop {
+    padding-left: 45px;
   }
 }
 
@@ -47,34 +64,48 @@
   display: none;
 
   @media @mobile-only {
+    padding: 0;
     display: block;
     position: absolute;
     top: 50%;
-    right: 31px;
-    width: 20px;
-    height: 14px;
-    background-color: transparent;
+    right: 30px;
+    width: 21px;
+    height: 21px;
     cursor: pointer;
     border: none;
+    background-color: transparent;
     transform: translateY(-50%);
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      top: 50%;
+      left: 50%;
+      width: 28px;
+      height: 3px;
+      background-color: @black;
+   }
+
+  &::before {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+
+    &--off::before {
+      top: 4px;
+      left: 50%;
       width: 20px;
       height: 2px;
-      background-color: @black;
+      box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+      transform: translateX(-50%);
     }
 
-    &::before {
-      top: 0;
-      box-shadow: 0 6px 0 0 @black;
-    }
-
-    &::after {
-      bottom: 0;
+    &--off::after {
+      content: none;
     }
   }
 }
@@ -92,7 +123,6 @@
 
   @media @desktop {
     order: -1;
-    border-right: 1px solid @gray--light;
   }
 }
 
@@ -102,24 +132,48 @@
   @media @tablet {
     border: none;
   }
+
+  @media @desktop {
+    &:not(:last-child) {
+      margin-right: 34px;
+      border-right: 1px solid @gray--light;
+    }
+  }
 }
 
 .main-nav__nav-link {
   margin: 0 auto;
   max-width: 290px;
   display: block;
-  padding: 26px 0 26px 74px;
+  padding: 25px 0 25px 74px;
   font-size: 17px;
   font-weight: 700;
   color: @black;
+  transition: 0.2s linear;
+
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:focus {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
 
   @media @tablet {
     width: 167px;
-    padding: 22px 0;
+  }
+
+  @media @tablet-only {
+    font-size: 15px;
+    padding: 16px 0;
   }
 
   @media @desktop {
-    padding: 31px 0;
+    padding: 31px 18px 31px 0;
   }
 }
 
@@ -149,6 +203,7 @@
 }
 
 .main-nav__menu-link {
+  position: relative;
   display: block;
   max-width: 290px;
   margin: 0 auto;
@@ -157,9 +212,39 @@
   font-weight: 700;
   color: @black;
 
-  @media @tablet {
-    padding: 31px 0 31px 74px;
+  &:hover {
+    color: fade(@black, 60%);
+    & .main-nav__menu-img {
+      fill: #63d1bb;
+    }
   }
+
+  &:focus {
+    color: fade(@black, 60%);
+    & .main-nav__menu-img {
+      fill: #63d1bb;
+    }
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+    & .main-nav__menu-img {
+      fill: fade(#63d1bb, 30%);
+    }
+  }
+
+  @media @tablet {
+    padding: 31px 0 31px 82px;
+  }
+}
+
+.main-nav__menu-img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  fill: #d3d2d2; //нет в переменных
+  transition: 0.2s linear;
+  transform: translateY(-50%);
 }
 
 .main-nav__news {
@@ -175,18 +260,32 @@
 }
 
 .main-nav__news-link {
-  padding-right: 55px;
-  font-size: 17px;
+  padding-right: 60px;
+  font-size: 15px;
   font-weight: 700;
   color: @black;
+  transition: 0.2s linear;
+
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:focus {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
 }
 
 .main-nav__text {
   display: none;
   margin: 0;
+  font-size: 15px;
 
   @media @tablet {
-    padding: 22px 50px 22px;
+    padding: 16px 50px 16px;
     flex-grow: 1;
     text-align: right;
     display: block;

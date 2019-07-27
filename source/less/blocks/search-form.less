@@ -33,14 +33,34 @@
 
 .search-form__btn {
   position: absolute;
+  padding: 0;
   top: 50%;
   left: 30px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 19px;
   border: none;
+  background-color: transparent;
   transform: translateY(-50%);
+  cursor: pointer;
+
+  &:hover .search-form__img {
+    fill: #63d1bb;
+  }
+
+  &:focus .search-form__img {
+    fill: #63d1bb;
+  }
+
+  &:active .search-form__img {
+    fill: fade(#63d1bb, 30%);
+  }
 
   @media @tablet {
     position: absolute;
   }
+}
+
+.search-form__img {
+  fill: #d3d2d2;
+  transition: 0.2s linear;
 }

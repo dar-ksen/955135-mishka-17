@@ -13,25 +13,33 @@
     justify-content: space-between;
     align-items: center;
   }
-
-  @media @desktop {
-    height: 142px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 .footer__logo {
   display: none;
   justify-content: center;
   align-items: center;
+  margin-right: 83px;
+  transition: 0.2s linear;
 
   @media @tablet {
     display: flex;
-  } //Что лучше для каждого экрана писать свои свойства, чтобы не запутаться?
-
-  @media @desktop {
-    display: flex;
   }
+
+  &:hover .footer__logo-image {
+    fill: #46c1ae;
+  }
+
+  &:focus .footer__logo-image {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__logo-image {
+  fill: #231f20;
+  transition: 0.2s linear;
 }
