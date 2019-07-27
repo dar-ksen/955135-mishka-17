@@ -10,7 +10,8 @@
     justify-content: space-between;
     align-items: center;
   }
-//Таким же образом оформить toggle
+  //Таким же образом оформить toggle
+
   @media @mobile-only {
     &--close .main-nav__nav,
     &--close .main-nav__menu {
@@ -85,15 +86,15 @@
       width: 28px;
       height: 3px;
       background-color: @black;
-   }
+    }
 
-  &::before {
-    transform: translate(-50%,-50%) rotate(45deg);
-  }
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
 
-  &::after {
-    transform: translate(-50%,-50%) rotate(-45deg);
-  }
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
 
     &--off::before {
       top: 4px;
@@ -214,6 +215,7 @@
 
   &:hover {
     color: fade(@black, 60%);
+
     & .main-nav__menu-img {
       fill: #63d1bb;
     }
@@ -221,6 +223,7 @@
 
   &:focus {
     color: fade(@black, 60%);
+
     & .main-nav__menu-img {
       fill: #63d1bb;
     }
@@ -228,6 +231,7 @@
 
   &:active {
     color: fade(@black, 30%);
+
     & .main-nav__menu-img {
       fill: fade(#63d1bb, 30%);
     }

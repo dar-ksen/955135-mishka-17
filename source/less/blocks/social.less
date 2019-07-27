@@ -8,9 +8,6 @@
   @media @tablet {
     border: none;
   }
-
-  @media @desktop {
-  }
 }
 
 .social__link {
@@ -20,9 +17,11 @@
   &:not(:last-child) {
     margin-right: 40px;
   }
+
   &:hover .social__img {
     fill: #46c1ae;//Цвета нет в переменных
   }
+
   &:focus .social__img {
     fill: #46c1ae;//Цвета нет в переменных
   }
@@ -30,7 +29,6 @@
   &:active .social__img {
     color: fade(#46c1ae, 30%);
   }
-
 }
 
 .social__img {

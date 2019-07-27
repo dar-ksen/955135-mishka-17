@@ -2,6 +2,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   .container;
+
   @media @tablet {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -25,6 +26,7 @@
 
   @media @tablet {
     width: 25%;
+
     &::after {
       content: none;
     }
@@ -45,6 +47,7 @@
   font-weight: 700;
   color: @turquoise;
   padding: 20px 0;
+
   &::after {
     content: "";
     position: absolute;
@@ -55,6 +58,7 @@
     background-color: @turquoise;
     transform: translateY(-50%);
   }
+
   @media @tablet {
     &::after {
       content: none;
@@ -120,6 +124,7 @@
 .form__checkbox-wrap {
   display: flex;
   flex-wrap: wrap;
+
   @media @tablet {
     width: 75%;
   }
@@ -154,7 +159,6 @@
   @media @desktop {
     width: 100/3%;
   }
-
 }
 
 .form__text-wrap {
@@ -169,6 +173,7 @@
   font-size: 17px;
   font-weight: 700;
   color: @black;
+
   @media @tablet {
     display: flex;
     align-items: baseline;
@@ -183,13 +188,10 @@
   font: inherit;
   border: none;
   border-bottom: 2px solid @black;
+
   @media @tablet {
     margin-left: 20px;
   }
-}
-
-.form__feedback {
-
 }
 
 .form__textarea {
