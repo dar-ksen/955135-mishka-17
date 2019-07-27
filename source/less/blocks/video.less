@@ -1,13 +1,29 @@
 .video {
-  padding-top: 50px;
+  padding-top: 0;
   padding-bottom: 50px;
   .container;
+
+  @media @tablet {
+    padding-bottom: 70px;
+  }
+
+  @media @desktop {
+    padding-bottom: 100px;
+  }
 }
 
 .video__wrap {
   max-width: 260px;
   margin: 0 auto;
   border: 1px solid @gray--light;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 
   @media @tablet {
     max-width: 668px;
@@ -24,7 +40,7 @@
 
 .video__title {
   position: relative;
-  margin: 25px 30px;
+  margin: 20px 30px 20px;
   padding-left: 56px;
   font-size: 17px;
   font-weight: 700;
@@ -43,13 +59,17 @@
 
   @media @tablet {
     font-size: 20px;
-    margin: 25px 40px;
+    margin: 40px 50px 30px;
+
+    &::before {
+      left: -10px;
+    }
   }
 
   @media @desktop {
+    margin: 90px 50px 40px 30px;
     padding: 0;
-    margin-left: 0;
-    margin-top: 100px;
+    line-height: 1.2;
     width: 146px;
 
     &::before {
@@ -62,7 +82,7 @@
 .video__content-wrap {
   display: flex;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media @tablet {
     order: -1;
@@ -95,31 +115,51 @@
   left: 50%;
   width: 101px;
   height: 77px;
-  background: url("../img/icon-play.svg") 0 0 no-repeat transparent;
+  background: url("../img/icon-play.svg") center /cover no-repeat transparent;
   border: none;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.2s linear;
+
+  &:hover {
+    width: 101*1.2px;
+    height: 77*1.2px;
+  }
+
+  &:focus {
+    width: 101*1.2px;
+    height: 77*1.2px;
+  }
+
+  &:active {
+    width: 101*0.8px;
+    height: 77*0.8px;
+    opacity: 0.3;
+  }
 }
 
 .video__text {
-  margin: 0 30px 40px;
+  margin: 0 40px 25px 35px;
   font-size: 13px;
+  line-height: 1.85;
 
   @media @tablet {
-    margin-left: 40px;
-    margin-right: 45px;
+    margin: 0 45px 35px 40px;
     font-size: 15px;
   }
 
   @media @desktop {
     width: 240px;
     margin: 0;
+    margin-left: 30px;
+
     margin-bottom: 50px;
   }
 }
 
 .video__btn {
-  margin: 0 30px 40px;
-  padding: 20px 0;
+  margin: 0 30px 35px;
+  padding: 15px 0;
 
   @media @tablet {
     margin: 0 40px 40px;
@@ -127,6 +167,6 @@
 
   @media @desktop {
     max-width: 230px;
-    margin-left: 0;
+    margin-left: 30px;
   }
 }
