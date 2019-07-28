@@ -181,13 +181,7 @@
           <dt class="contacts__term">адрес:</dt>
           <dd class="contacts__desc">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
         </dl>
-        <div class="contacts__map">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
-            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" alt="Наше местонахождение">
-          </picture>
-        </div>
+        <div class="contacts__map" id="map"></div>
         <a class="btn contacts__btn" href="#">Напишите нам</a>
       </div>
     </section>
@@ -244,6 +238,8 @@
   <div class="mist"></div>
   <script src="js/menu.js"></script>
   <script src="js/modalCart.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5yjcv5QXwZwwLAP3v8ARAl21NraMzbU8&callback=initMap"></script>
+  <script src="js/map.js"> </script>
 
 </body>
 
