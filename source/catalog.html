@@ -230,6 +230,24 @@
     </div>
   </footer>
 
+  <section class="modal-cart">
+    <h2 class="modal-cart__title">Добавить в козину</h2>
+    <p class="modal-cart__text">Выберите размер:</p>
+    <form class="modal-cart__form cart-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="cart-form__wrap">
+        <input class="cart-form__input visually-hidden" type="radio" id="S" name="size" value="S" checked>
+        <label class="cart-form__label" for="S">S</label>
+        <input class="cart-form__input visually-hidden" type="radio" id="M" name="size" value="M">
+        <label class="cart-form__label" for="M">M</label>
+        <input class="cart-form__input visually-hidden" type="radio" id="L" name="size" value="L">
+        <label class="cart-form__label" for="L">L</label>
+      </div>
+      <button class="cart-form__btn btn" type="submit">Добавить</button>
+    </form>
+  </section>
+  <div class="mist"></div>
+  <script src="js/menu.js"></script>
+
 </body>
 
 </html>
