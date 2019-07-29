@@ -1,0 +1,36 @@
+.cart-form__wrap {
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cart-form__input:checked + .cart-form__label {
+  border-color: @turquoise;
+}
+
+.cart-form__label {
+  box-sizing: border-box;
+  width: 32%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid @gray--light;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+}
+
+.cart-form__btn {
+  margin: 0 auto;
+  width: 100%;
+  padding: 17px 0;
+  color: @white;
+  background-color: @turquoise;
+  border: none;
+}

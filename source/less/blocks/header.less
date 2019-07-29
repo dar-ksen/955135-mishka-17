@@ -1,15 +1,54 @@
 .header {
   position: relative;
+
+  @media @tablet {
+    background-color: @white--dark;
+
+    &--inner {
+      background-color: @white--darken;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 89px;
+      width: 100%;
+      border-bottom: 1px solid @gray--light;
+      background-color: @white;
+      z-index: 1;
+    }
+  }
 }
 
 .header__logo {
-  width: 86px;
-  height: 35px;
+  transition: 0.2s linear;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .header__logo {
+.header__logo-img {
+  width: 86px;
+  height: 35px;
+
+  @media @tablet {
     width: 112px;
     height: 46px;
+  }
+
+  @media @desktop {
+    width: 149px;
+    height: 72px;
   }
 }
