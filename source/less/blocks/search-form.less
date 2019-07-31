@@ -3,7 +3,7 @@
   position: relative;
   display: block;
   margin: 0 auto;
-  max-width: 290px;
+  max-width: 320px;
   padding: 26px 0 26px 74px;
 
   @media @tablet {
@@ -18,6 +18,8 @@
 
 .search-form__input {
   font: inherit;
+  width: 200px;
+  margin-right: 10px;
   font-size: 17px;
   font-weight: 700;
   color: @black;
@@ -36,9 +38,9 @@
   position: absolute;
   padding: 0;
   top: 50%;
-  left: 30px;
-  width: 18px;
-  height: 19px;
+  left: 0;
+  width: 74px;
+  height: 81px;
   border: none;
   background-color: transparent;
   transform: translateY(-50%);
@@ -57,7 +59,8 @@
   }
 
   @media @tablet {
-    position: absolute;
+    width: 85px;
+    height: 89px;
   }
 }
 

@@ -46,10 +46,10 @@
 .main-nav__logo-wrap {
   order: 1;
   position: relative;
-  display: flex;
   border-bottom: 1px solid @gray--light;
 
   @media @tablet {
+    display: flex;
     height: 90px;
     width: 40%;
     flex-grow: 1;
@@ -62,20 +62,19 @@
 }
 
 .main-nav__logo {
-  text-align: center;
+  display: block;
   width: 100%;
+  text-align: center;
   padding: 22px 0;
 
   @media @tablet {
-    padding: 0 0 0 50px;
-    width: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 50px;
   }
 
   @media @desktop {
-    padding-left: 45px;
+    padding: 9px 0 9px 45px;
   }
 }
 
@@ -122,7 +121,7 @@
   list-style: none;
 
   @media @tablet {
-    padding-left: 50px;
+    margin-left: 50px;
     display: flex;
     order: 3;
   }
@@ -150,7 +149,7 @@
 .main-nav__nav-link {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 290px;
+  max-width: 320px;
   display: block;
   padding: 25px 0 25px 74px;
   font-size: 17px;
@@ -180,7 +179,7 @@
   }
 
   @media @desktop {
-    width: 167px;
+    width: 185px;
     padding: 31px 0;
   }
 }
@@ -193,7 +192,7 @@
   @media @tablet {
     order: 2;
     display: flex;
-    padding-right: 50px;
+    margin-right: 50px;
     border-left: 1px solid @gray--light;
   }
 }
@@ -214,7 +213,7 @@
   box-sizing: border-box;
   position: relative;
   display: block;
-  max-width: 290px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 26px 0 26px 74px;
   font-size: 17px;
@@ -293,11 +292,11 @@
 
 .main-nav__text {
   display: none;
-  margin: 0;
+  margin: 0 50px 0 0;
   font-size: 15px;
 
   @media @tablet {
-    padding: 16px 50px 16px;
+    padding: 16px 0;
     flex-grow: 1;
     text-align: right;
     display: block;
