@@ -1,6 +1,7 @@
 .video {
   padding-top: 0;
   padding-bottom: 50px;
+
   .container;
 
   @media @tablet {
@@ -15,6 +16,7 @@
 .video__wrap {
   max-width: 260px;
   margin: 0 auto;
+
   border: 1px solid @gray--light;
 
   &:hover {
@@ -26,40 +28,49 @@
   }
 
   @media @tablet {
-    max-width: 668px;
     display: flex;
     flex-direction: column;
+
+    max-width: 668px;
   }
 
   @media @desktop {
-    max-width: 1300px;
     flex-wrap: wrap;
+
+    max-width: 1300px;
     max-height: 600px;//Приходится ограничивать высоту, возможно придется делать через position absolute
   }
 }
 
 .video__title {
   position: relative;
+
   margin: 20px 30px 20px;
   padding-left: 56px;
-  font-size: 17px;
-  font-weight: 700;
+
   color: @black;
 
+  font-size: 17px;
+  font-weight: 700;
+
   &::before {
-    content: "";
     position: absolute;
     top: 50%;
     left: 5px;
+
     width: 32px;
     height: 30px;
-    background: url("../img/icon-video.svg") 0 0 no-repeat;
+
+    content: "";
     transform: translateY(-50%);
+
+    background: url("../img/icon-video.svg") 0 0 no-repeat;
   }
 
   @media @tablet {
-    font-size: 20px;
     margin: 40px 50px 30px;
+
+    font-size: 20px;
 
     &::before {
       left: -10px;
@@ -67,10 +78,11 @@
   }
 
   @media @desktop {
+    width: 146px;
     margin: 90px 50px 40px 30px;
     padding: 0;
+
     line-height: 1.2;
-    width: 146px;
 
     &::before {
       top: -30px;
@@ -80,12 +92,15 @@
 }
 
 .video__content-wrap {
-  display: flex;
   position: relative;
+
+  display: flex;
+
   margin-bottom: 28px;
 
   @media @tablet {
     order: -1;
+
     margin: 0;
   }
 
@@ -113,13 +128,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
   width: 101px;
   height: 77px;
-  background: url("../img/icon-play.svg") center /cover no-repeat transparent;
-  border: none;
-  transform: translate(-50%, -50%);
+
   cursor: pointer;
   transition: 0.2s linear;
+  transform: translate(-50%, -50%);
+
+  border: none;
+  background: url("../img/icon-play.svg") center /cover no-repeat transparent;
 
   &:hover {
     width: 101*1.2px;
@@ -134,26 +152,28 @@
   &:active {
     width: 101*0.8px;
     height: 77*0.8px;
+
     opacity: 0.3;
   }
 }
 
 .video__text {
   margin: 0 40px 25px 35px;
+
   font-size: 13px;
   line-height: 1.85;
 
   @media @tablet {
     margin: 0 45px 35px 40px;
+
     font-size: 15px;
   }
 
   @media @desktop {
     width: 240px;
     margin: 0;
-    margin-left: 30px;
-
     margin-bottom: 50px;
+    margin-left: 30px;
   }
 }
 

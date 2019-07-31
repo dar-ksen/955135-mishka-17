@@ -1,18 +1,21 @@
-// Кнопка
 .btn {
-  box-sizing: border-box;
   display: block;
-  font: inherit;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 700;
-  color: @black--light;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+  transition: 0.2s linear;
   text-align: center;
   text-transform: uppercase;
-  cursor: pointer;
-  background-color: transparent;
+
+  color: @black--light;
   border: 2px solid @black--light;
-  transition: 0.2s linear;
+  background-color: transparent;
+
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
 
   &:hover {
     color: @white;

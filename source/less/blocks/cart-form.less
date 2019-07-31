@@ -1,8 +1,9 @@
 .cart-form__wrap {
-  margin-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  margin-bottom: 32px;
 }
 
 .cart-form__input:checked + .cart-form__label {
@@ -14,16 +15,20 @@
 }
 
 .cart-form__label {
-  box-sizing: border-box;
-  width: 32%;
-  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-sizing: border-box;
+  width: 32%;
+  height: 52px;
+
+  cursor: pointer;
+
   border: 2px solid @gray--light;
+
   font-size: 17px;
   font-weight: 700;
-  cursor: pointer;
 
   &:hover {
     border-color: #c7c7c7;
@@ -31,10 +36,11 @@
 }
 
 .cart-form__btn {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
   padding: 17px 0;
+
   color: @white;
-  background-color: @turquoise;
   border: none;
+  background-color: @turquoise;
 }

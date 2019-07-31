@@ -1,29 +1,36 @@
 .reviews {
   position: relative;
+
   padding-top: 30px;
   padding-bottom: 45px;
+
   .container;
 
   &::after {
-    content: "";
     position: absolute;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+
     height: 7px;
+
+    content: "";
+
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: 320px 7px;
-    background-position-x: 0;
     background-repeat: repeat-x;
+    background-position-x: 0;
+    background-size: 320px 7px;
   }
 
   @media @tablet {
     padding-top: 65px;
     padding-bottom: 100px;
+
     background: url("../img/review@1x.jpg") 0 0 no-repeat;
 
     &::after {
       height: 17px;
+
       background-size: auto 17px;
     }
   }
@@ -31,13 +38,16 @@
   @media @desktop {
     padding-top: 60px;
     padding-bottom: 155px;
+
     background: url("../img/review@1x.jpg") 0 0 no-repeat;
     background-position-x: 50px;
 
     &::after {
-      left: 50px;
       right: 50px;
+      left: 50px;
+
       height: 23px;
+
       background-size: auto 23px;
     }
   }
@@ -45,18 +55,22 @@
 
 .reviews__title {
   margin: 0 0 15px;
+
+  color: @black;
+
   font-size: 25px;
   font-weight: 700;
-  color: @black;
 
   @media @tablet {
     margin-bottom: 40px;
+
     font-size: 43px;
   }
 
   @media @desktop {
     margin-bottom: 35px;
     margin-left: 175/1050*100%;
+
     font-size: 53px;
   }
 }
@@ -69,12 +83,14 @@
 
 .reviews__text {
   margin: 0 0 25px;
+
   font-size: 15px;
   line-height: 30px;
 
   @media @tablet {
-    font-size: 17px;
     margin-bottom: 60px;
+
+    font-size: 17px;
   }
 
   @media @desktop {
@@ -84,25 +100,30 @@
 
 .reviews__author {
   margin: 0 0 5px;
-  font-size: 17px;
+
   color: @black;
+
+  font-size: 17px;
   font-weight: 700;
 }
 
 .reviews__nickname {
   margin: 0 0 30px;
+
   font-size: 17px;
 }
 
 .reviews__menu {
-  margin: 0 0 38px;
   display: flex;
   flex-wrap: wrap;
+
+  margin: 0 0 38px;
 
   @media @tablet {
     position: absolute;
     right: 50px;
     bottom: 95px;
+
     width: 175px;
   }
 
@@ -110,29 +131,35 @@
     position: absolute;
     right: 50px;
     bottom: 150px;
+
     width: 175px;
   }
 }
 
 .reviews__slide-btn {
-  box-sizing: border-box;
   position: relative;
+
+  box-sizing: border-box;
   width: 50%;
   height: 52px;
-  background-color: transparent;
+
   border: 1px solid @gray--light;
+  background-color: transparent;
 
   &::after {
-    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
+
     width: 50px;
     height: 26px;
+
+    content: "";
+    transition: 0.2s linear;
+
     background-image: url("../img/icon-left-arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    transition: 0.2s linear;
   }
 
   &:hover::after {
@@ -178,6 +205,7 @@
     position: absolute;
     top: 80px;
     right: 50px;
+
     width: 175px;
     margin: 0;
   }
@@ -186,6 +214,7 @@
     position: absolute;
     top: 80px;
     right: 50px;
+
     width: 175px;
     margin: 0;
   }

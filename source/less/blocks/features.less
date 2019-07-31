@@ -1,6 +1,7 @@
 .features {
   padding-top: 25px;
   padding-bottom: 25px;
+
   .container;
 
   @media @tablet {
@@ -22,19 +23,21 @@
   }
 
   @media @desktop {
-    margin-left: 16.666%;
     margin-right: 16.666%;
+    margin-left: 16.666%;
   }
 }
 
 .features__title {
   margin: 0;
+
   font-size: 25px;
   font-weight: 700;
 
   @media @tablet {
-    font-size: 43px;
     margin-bottom: 10px;
+
+    font-size: 43px;
   }
 
   @media @desktop {
@@ -45,6 +48,7 @@
 .features__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 
   @media @tablet {
@@ -59,22 +63,27 @@
 }
 
 .features__item {
-  margin: 0 auto;
-  width: 260px;
-  box-sizing: border-box;
   position: relative;
+
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
   padding-top: 82px;
+
   font-size: 17px;
-  line-height: 1.2em;
   font-weight: 700;
+  line-height: 1.2em;
 
   &::before {
-    content: "";
     position: absolute;
     top: 25px;
     left: -5px;
+
     width: 55px;
     height: 40px;
+
+    content: "";
+
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -125,9 +134,10 @@
 
   @media @tablet {
     width: 300px;
-    padding-top: 80px;
     margin-right: auto;
     margin-bottom: 25px;
+    padding-top: 80px;
+
     font-size: 20px;
   }
 
