@@ -1,14 +1,15 @@
 .main-nav {
   position: relative;
+  z-index: 2;
+
   max-width: 1300px;
   margin: 0 auto;
-  z-index: 2;
 
   @media @tablet {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
   }
 
   @media @mobile-only {
@@ -21,10 +22,13 @@
       &::before {
         top: 4px;
         left: 50%;
+
         width: 20px;
         height: 2px;
-        box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+
         transform: translateX(-50%);
+
+        box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
       }
 
       &::after {
@@ -44,15 +48,19 @@
 }
 
 .main-nav__logo-wrap {
-  order: 1;
   position: relative;
-  display: flex;
+
+  order: 1;
+
   border-bottom: 1px solid @gray--light;
 
   @media @tablet {
-    height: 90px;
-    width: 40%;
+    display: flex;
     flex-grow: 1;
+
+    width: 40%;
+    height: 90px;
+
     border: none;
   }
 
@@ -62,20 +70,22 @@
 }
 
 .main-nav__logo {
-  text-align: center;
+  display: block;
+
   width: 100%;
   padding: 22px 0;
 
+  text-align: center;
+
   @media @tablet {
-    padding: 0 0 0 50px;
-    width: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    padding-left: 50px;
+
+    text-align: left;
+    vertical-align: middle;
   }
 
   @media @desktop {
-    padding-left: 45px;
+    padding: 9px 0 9px 45px;
   }
 }
 
@@ -83,26 +93,33 @@
   display: none;
 
   @media @mobile-only {
-    padding: 0;
-    display: block;
     position: absolute;
     top: 50%;
     right: 30px;
+
+    display: block;
+
     width: 21px;
     height: 21px;
+    padding: 0;
+
     cursor: pointer;
+    transform: translateY(-50%);
+
     border: none;
     background-color: transparent;
-    transform: translateY(-50%);
 
     &::before,
     &::after {
-      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
+
       width: 28px;
       height: 3px;
+
+      content: "";
+
       background-color: @black;
     }
 
@@ -119,12 +136,14 @@
 .main-nav__nav {
   margin: 0;
   padding: 0;
+
   list-style: none;
 
   @media @tablet {
-    padding-left: 50px;
     display: flex;
     order: 3;
+
+    margin-left: 50px;
   }
 
   @media @desktop {
@@ -142,21 +161,26 @@
   @media @desktop {
     &:not(:last-child) {
       margin-right: 34px;
+
       border-right: 1px solid @gray--light;
     }
   }
 }
 
 .main-nav__nav-link {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 290px;
   display: block;
+
+  box-sizing: border-box;
+  max-width: 320px;
+  margin: 0 auto;
   padding: 25px 0 25px 74px;
+
+  transition: 0.2s linear;
+
+  color: @black;
+
   font-size: 17px;
   font-weight: 700;
-  color: @black;
-  transition: 0.2s linear;
 
   &:hover {
     color: fade(@black, 60%);
@@ -175,12 +199,13 @@
   }
 
   @media @tablet-only {
-    font-size: 15px;
     padding: 16px 0;
+
+    font-size: 15px;
   }
 
   @media @desktop {
-    width: 167px;
+    width: 185px;
     padding: 31px 0;
   }
 }
@@ -188,12 +213,15 @@
 .main-nav__menu {
   margin: 0;
   padding: 0;
+
   list-style: none;
 
   @media @tablet {
-    order: 2;
     display: flex;
-    padding-right: 50px;
+    order: 2;
+
+    margin-right: 50px;
+
     border-left: 1px solid @gray--light;
   }
 }
@@ -211,15 +239,19 @@
 }
 
 .main-nav__menu-link {
-  box-sizing: border-box;
   position: relative;
+
   display: block;
-  max-width: 290px;
+
+  box-sizing: border-box;
+  max-width: 320px;
   margin: 0 auto;
   padding: 26px 0 26px 74px;
+
+  color: @black;
+
   font-size: 17px;
   font-weight: 700;
-  color: @black;
 
   &:hover {
     color: fade(@black, 60%);
@@ -254,29 +286,36 @@
   position: absolute;
   top: 50%;
   left: 30px;
-  fill: #d3d2d2; //нет в переменных
+
   transition: 0.2s linear;
   transform: translateY(-50%);
+
+  fill: #d3d2d2; //нет в переменных
 }
 
 .main-nav__news {
   display: none;
+
   margin: 0;
   padding: 0 0 0 50px;
+
   list-style: none;
 
   @media @desktop {
-    order: 3;
     display: flex;
+    order: 3;
   }
 }
 
 .main-nav__news-link {
   padding-right: 60px;
+
+  transition: 0.2s linear;
+
+  color: @black;
+
   font-size: 15px;
   font-weight: 700;
-  color: @black;
-  transition: 0.2s linear;
 
   &:hover {
     color: fade(@black, 60%);
@@ -293,14 +332,18 @@
 
 .main-nav__text {
   display: none;
-  margin: 0;
+
+  margin: 0 50px 0 0;
+
   font-size: 15px;
 
   @media @tablet {
-    padding: 16px 50px 16px;
-    flex-grow: 1;
-    text-align: right;
     display: block;
+    flex-grow: 1;
     order: 4;
+
+    padding: 16px 0;
+
+    text-align: right;
   }
 }

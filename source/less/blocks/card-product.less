@@ -1,8 +1,10 @@
 .card-product {
-  padding-top: 30px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+
+  padding-top: 30px;
+
   .container;
 
   @media @tablet {
@@ -11,18 +13,20 @@
   }
 
   @media @desktop {
-    padding-top: 120px;
+    align-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch;
+
+    padding-top: 120px;
   }
 }
 
 .card-product__item {
-  margin-bottom: 30px;
   box-sizing: border-box;
   width: 260px;
+  margin-bottom: 30px;
+
   border: 1px solid @gray--light;
 
   &:hover .card-product__wrap {
@@ -34,16 +38,18 @@
   }
 
   @media @tablet {
-    margin-bottom: 50px;
     display: flex;
+
     width: 668px;
+    margin-bottom: 50px;
   }
 
   @media @desktop {
-    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
+
     width: 316px;
+    margin-bottom: 60px;
   }
 }
 
@@ -73,23 +79,25 @@
   }
 }
 
-
-.card-product__link {
-  color: @black;
-}
-
 .card-product__title {
-  margin: 25px 0 10px;
+  margin: 0;
+  padding: 25px 0 10px;
+
+  color: @black;
+
   font-size: 17px;
   font-weight: 700;
 
   @media @tablet {
-    margin: 20px 30px 5px 0;
+    width: 230px;
+    padding: 20px 0 5px;
+
     font-size: 20px;
   }
 
   @media @desktop {
-    margin: 25px 20px 10px 0;
+    padding: 25px 0 10px;
+
     font-size: 20px;
     line-height: 1.2; //вопрос по высоте (переход на вторую строку.)
   }
@@ -97,6 +105,7 @@
 
 .card-product__desc {
   margin: 0 0 20px;
+
   font-size: 13px;
 
   @media @tablet {
@@ -109,9 +118,11 @@
 }
 
 .card-product__price-wrap {
-  padding: 25px 0 25px;
   display: flex;
   justify-content: space-between;
+
+  padding: 25px 0 25px;
+
   border-top: 1px solid @gray--light;
 
   @media @tablet {
@@ -142,5 +153,6 @@
 
 .card-product__btn-img {
   vertical-align: middle;
+
   fill: #d3d2d2;
 }

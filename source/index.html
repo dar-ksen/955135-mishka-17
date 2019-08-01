@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
   <svg style="display:none;">
-
     <symbol viewBox="-0.8 -0.8 17.6 17.6" id="icon-search">
       <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
     </symbol>
@@ -131,9 +131,9 @@
           </tr>
         </table>
         <picture>
-          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-          <img class="week-goods__img" src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
+          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
+          <img class="week-goods__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
         </picture>
         <p class="week-goods__count">Цена: 990 руб.</p>
         <a class="btn week-goods__btn" href="#">Заказать</a>
@@ -142,7 +142,7 @@
 
     <section class="features">
       <div class="features__wrap">
-        <h2 class="features__title">Коротко о нас</h2>
+        <h2 class="features__title">Коротко о нас:</h2>
         <ul class="features__list"><!--Обратить внимание на символы и использование тега <br>-->
           <li class="features__item features__item--ecology">Экологически чистые&nbspматериалы</li>
           <li class="features__item features__item--count"> Скандинавский стиль по&nbspроссийской цене</li>
@@ -181,7 +181,7 @@
           <dt class="contacts__term">адрес:</dt>
           <dd class="contacts__desc">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</dd>
         </dl>
-        <div class="contacts__map" id="map">
+        <div class="contacts__map">
           <iframe class="contacts__map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6493480567574!2d30.32331871352231!3d59.93882259021247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2sDokhodnyy+Dom+N.+A.+Mel&#39;tsera!5e0!3m2!1sen!2sru!4v1564335800313!5m2!1sen!2sru" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <a class="btn contacts__btn" href="#">Напишите нам</a>
@@ -227,11 +227,11 @@
     <p class="modal-cart__text">Выберите размер:</p>
     <form class="modal-cart__form cart-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="cart-form__wrap">
-        <input class="cart-form__input visually-hidden" type="radio" id="S" name="size" value="S" checked>
+        <input class="cart-form__input visually-hidden" tabindex="0" type="radio" id="S" name="size" value="S" checked>
         <label class="cart-form__label" for="S">S</label>
-        <input class="cart-form__input visually-hidden" type="radio" id="M" name="size" value="M">
+        <input class="cart-form__input visually-hidden" tabindex="0" type="radio" id="M" name="size" value="M">
         <label class="cart-form__label" for="M">M</label>
-        <input class="cart-form__input visually-hidden" type="radio" id="L" name="size" value="L">
+        <input class="cart-form__input visually-hidden" tabindex="0" type="radio" id="L" name="size" value="L">
         <label class="cart-form__label" for="L">L</label>
       </div>
       <button class="cart-form__btn btn" type="submit">Добавить</button>
