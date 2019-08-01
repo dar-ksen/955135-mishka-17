@@ -6,12 +6,23 @@
   margin-bottom: 32px;
 }
 
-.cart-form__input:checked + .cart-form__label {
-  border-color: @turquoise;
-}
+.cart-form__input {
+  &:checked + .cart-form__label {
+    border-color: @turquoise;
+  }
 
-.cart-form__input:focus + .cart-form__label {
-  background-color: fade(@turquoise, 30%);
+  &:hover + .cart-form__label {
+    border-color: #c7c7c7;
+  }
+
+  &:focus + .cart-form__label {
+    border-color: #c7c7c7;
+    background-color: fade(@turquoise, 30%);
+  }
+
+  &:active + .cart-form__label {
+    border-color: @turquoise;
+  }
 }
 
 .cart-form__label {
@@ -29,10 +40,6 @@
 
   font-size: 17px;
   font-weight: 700;
-
-  &:hover {
-    border-color: #c7c7c7;
-  }
 }
 
 .cart-form__btn {

@@ -10,12 +10,13 @@
 
 .form__desc {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 0  30px;
 
   font-size: 13px;
 
   @media @tablet {
+    margin-bottom: 0;
     padding: 0 50px;
 
     font-size: 17px;
@@ -48,6 +49,8 @@
 }
 
 .form__title {
+  margin-top: 10px;
+  margin-bottom: 20px;
   position: relative;
 
   display: block;
@@ -77,6 +80,7 @@
   }
 
   @media @tablet {
+    margin: 0;
     width: 25%;
     padding-top: 20px;
 
@@ -128,6 +132,27 @@
   }
 }
 
+.form__radio-input {
+  &:hover + .form__radio-desc {
+    &::before {
+      border-color: @turquoise;
+    }
+  }
+
+  &:focus + .form__radio-desc {
+    &::before {
+      border-color: @turquoise;
+    }
+  }
+
+  &:active + .form__radio-desc {
+    &::before {
+      border-color: #c7c7c7;
+    }
+  }
+}
+
+
 .form__radio-desc {
   position: relative;
 
@@ -168,6 +193,15 @@
   }
 }
 
+.form__checkbox-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media @tablet {
+    width: 75%;
+  }
+}
+
 
 .form__checkbox-input:checked + .form__checkbox-desc {
   &::after {
@@ -194,12 +228,23 @@
   }
 }
 
-.form__checkbox-wrap {
-  display: flex;
-  flex-wrap: wrap;
+.form__checkbox-input {
+  &:hover + .form__checkbox-desc {
+    &::before {
+      border-color: @turquoise;
+    }
+  }
 
-  @media @tablet {
-    width: 75%;
+  &:focus + .form__checkbox-desc {
+    &::before {
+      border-color: @turquoise;
+    }
+  }
+
+  &:active + .form__checkbox-desc {
+    &::before {
+      border-color: #c7c7c7;
+    }
   }
 }
 
@@ -299,8 +344,27 @@
   font: inherit;
   font-size: 19px;
 
+  transition: border-color 0.2s linear;
+
   @media @tablet {
     font-size: 19px;
+  }
+
+  &:hover {
+    border-color: @turquoise-dark;
+
+    & + .form__input-img {
+      fill: @turquoise-dark;
+    }
+  }
+
+  &:focus {
+    border-color: @turquoise-dark;
+    outline: none;
+
+    & + .form__input-img {
+      fill: @turquoise-dark;
+    }
   }
 }
 
@@ -331,6 +395,8 @@
   width: 100%;
   padding: 18px;
 
+  resize: none;
+
   border: 2px solid @black;
 
   font: inherit;
@@ -341,6 +407,15 @@
     max-width: 700px;
 
     font-size: 19px;
+  }
+
+  &:hover {
+    border-color: @turquoise-dark;
+  }
+
+  &:focus {
+    border-color: @turquoise-dark;
+    outline: none;
   }
 }
 
