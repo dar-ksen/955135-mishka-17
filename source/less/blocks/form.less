@@ -1,6 +1,5 @@
 .form {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 22px 0 35px;
 
   @media @tablet {
     padding-top: 70px;
@@ -10,10 +9,11 @@
 
 .form__desc {
   max-width: 1300px;
-  margin: 0 auto 30px;
+  margin: 0;
   padding: 0  30px;
 
   font-size: 13px;
+  line-height: 24px;
 
   @media @tablet {
     margin-bottom: 0;
@@ -49,14 +49,13 @@
 }
 
 .form__title {
-  margin-top: 10px;
-  margin-bottom: 20px;
   position: relative;
 
   display: block;
 
   box-sizing: border-box;
   width: 100%;
+  margin: 20px 0 0;
 
   text-transform: uppercase;
 
@@ -80,9 +79,8 @@
   }
 
   @media @tablet {
-    margin: 0;
     width: 25%;
-    padding-top: 20px;
+    margin: 0;
 
     &::after {
       content: none;
@@ -108,17 +106,21 @@
   }
 }
 
+.form__radio-wrap {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
 .form__radio-input:checked + .form__radio-desc {
   &::after {
     position: absolute;
-    top: 50%;
-    left: 15px;
+    top: 16px;
+    left: 12px;
 
     width: 16px;
     height: 16px;
 
     content: "";
-    transform: translateY(-50%);
 
     border-radius: 50%;
     background-color: @turquoise;
@@ -158,23 +160,24 @@
 
   display: block;
 
-  padding: 20px 0 20px 64px;
+  padding: 12px 0 12px 64px;
 
   color: @black;
 
   font-size: 17px;
   font-weight: 700;
+  line-height: 1.06;
 
   &::before {
     position: absolute;
-    top: 50%;
+    top: 4px;
     left: 0;
 
+    box-sizing: border-box;
     width: 40px;
     height: 40px;
 
     content: "";
-    transform: translateY(-50%);
 
     border: 2px solid @black;
     border-radius: 50%;
@@ -194,6 +197,7 @@
 }
 
 .form__checkbox-wrap {
+  padding-bottom: 2px;
   display: flex;
   flex-wrap: wrap;
 
@@ -206,9 +210,10 @@
 .form__checkbox-input:checked + .form__checkbox-desc {
   &::after {
     position: absolute;
-    top: 18px;
+    top: 8px;
     left: 15px;
 
+    box-sizing: border-box;
     width: 12px;
     height: 23px;
 
@@ -254,8 +259,10 @@
   display: block;
 
   box-sizing: border-box;
-  width: 100%;
-  padding: 20px 0 20px 64px;
+  width: 175px;
+  padding: 10px 0 10px 64px;
+  margin-right: auto;
+  margin-top: 14px;
 
   color: @black;
 
@@ -267,6 +274,7 @@
     top: 50%;
     left: 0;
 
+    box-sizing: border-box;
     width: 40px;
     height: 40px;
 
@@ -296,6 +304,7 @@
 }
 
 .form__text-container {
+  padding-bottom: 5px;
   @media @tablet {
     width: 75%;
   }
@@ -306,6 +315,7 @@
 }
 
 .form__text-wrap {
+  margin-top: 20px;
   @media @tablet {
     display: flex;
     align-items: baseline;
@@ -318,11 +328,10 @@
 .form__text-desc {
   position: relative;
 
-  margin-bottom: 17px;
-
   color: @black;
 
   font-size: 17px;
+  line-height: 1;
   font-weight: 700;
 
   @media @tablet {
@@ -333,20 +342,27 @@
 .form__text-input {
   box-sizing: border-box;
   width: 100%;
-  height: 54px;
-  margin-bottom: 30px;
-  padding-left: 18px;
+  height: 48px;
+
+  transition: border-color 0.2s linear;
 
   border: none;
   border-bottom: 2px solid @black;
   background-color: transparent;
 
   font: inherit;
-  font-size: 19px;
+  font-size: 17px;
 
-  transition: border-color 0.2s linear;
+  &--phone,
+  &--email {
+    height: 54px;
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
 
   @media @tablet {
+    padding-left: 18px;
+
     font-size: 19px;
   }
 
@@ -385,15 +401,16 @@
 .form__input-img {
   position: absolute;
   top: 10px;
-  right: 25px;
+  right: 4px;
 
   fill: #cccccc;
 }
 
 .form__textarea {
+  margin-top: 15px;
   box-sizing: border-box;
   width: 100%;
-  padding: 18px;
+  padding: 15px 15px;
 
   resize: none;
 
@@ -401,6 +418,7 @@
 
   font: inherit;
   font-size: 17px;
+  line-height: 18px;
 
   @media @tablet {
     width: 75%;
@@ -440,7 +458,7 @@
 }
 
 .form__submit-info {
-  margin: 0 0 30px;
+  margin: 8px 0 30px;
 
   font-size: 14px;
 
@@ -451,6 +469,6 @@
 
 .form__submit-btn {
   width: 260px;
-  margin: 0 0 30px;
-  padding: 20px 0;
+  margin: 0 0 15px;
+  padding: 15px 0;
 }
