@@ -2,13 +2,17 @@
   padding: 22px 0 35px;
 
   @media @tablet {
-    padding-top: 70px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  @media @desktop {
+    padding-top: 115px;
+    padding-bottom: 30px;
   }
 }
 
 .form__desc {
-  max-width: 1300px;
   margin: 0;
   padding: 0  30px;
 
@@ -20,17 +24,43 @@
     padding: 0 50px;
 
     font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media @desktop {
+    width: 700px;
+    padding: 0;
+    margin: 0 auto;
   }
 }
 
 .form__block {
   margin: 0;
-  padding: 0 30px;
-
+  padding: 0;
   border: none;
 
   @media @tablet {
-    padding: 50px;
+    padding: 50px 0;
+
+    &--type {
+      padding-top:48px;
+      padding-bottom: 12px;
+    }
+
+    &--color {
+      padding-top: 38px;
+      padding-bottom: 35px;
+    }
+
+    &--user-info {
+      padding-top: 32px;
+      padding-bottom: 45px;
+    }
+
+    &--user-feedback {
+      padding-top: 50px;
+      padding-bottom: 35px;
+    }
 
     &--gray {
       background-color: @white--darken;
@@ -39,10 +69,13 @@
 }
 
 .form__block-wrap {
-  max-width: 1300px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  max-width: 1150px;
   margin: 0 auto;
 
   @media @tablet {
+    padding: 0 50px;
     display: flex;
     align-items: baseline;
   }
@@ -89,7 +122,7 @@
 
   @media @desktop {
     width: 16.666%;
-    padding-left: 7.14%;
+    padding-left: 6%;
   }
 }
 
@@ -126,10 +159,11 @@
     background-color: @turquoise;
 
     @media @tablet {
-      left: 17px;
+      top: 13px;
+      left: 16px;
 
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -170,7 +204,7 @@
 
   &::before {
     position: absolute;
-    top: 4px;
+    top: -4px;
     left: 0;
 
     box-sizing: border-box;
@@ -185,6 +219,7 @@
   }
 
   @media @tablet {
+    margin-bottom: 32px;
     padding-left: 80px;
 
     font-size: 19px;
@@ -197,13 +232,20 @@
 }
 
 .form__checkbox-wrap {
-  padding-bottom: 2px;
   display: flex;
   flex-wrap: wrap;
 
+  padding-bottom: 2px;
+
   @media @tablet {
-    width: 75%;
+    width: 70%;
+    justify-content: space-between;
   }
+
+    @media @desktop {
+      width: 75%;
+      justify-content: flex-start;
+    }
 }
 
 
@@ -224,7 +266,7 @@
     border-bottom: 2px solid @black;
 
     @media @tablet {
-      top: 15px;
+      top: 8px;
       left: 20px;
 
       width: 15px;
@@ -260,9 +302,9 @@
 
   box-sizing: border-box;
   width: 175px;
-  padding: 10px 0 10px 64px;
-  margin-right: auto;
   margin-top: 14px;
+  margin-right: auto;
+  padding: 10px 0 10px 64px;
 
   color: @black;
 
@@ -286,8 +328,9 @@
   }
 
   @media @tablet {
-    width: 50%;
-    margin-bottom: 20px;
+    width: 200px;
+    margin-bottom: 12px;
+    margin-right: 0;
     padding-left: 80px;
 
     font-size: 19px;
@@ -299,7 +342,7 @@
   }
 
   @media @desktop {
-    width: 264px;
+    width: 260px;
   }
 }
 
@@ -333,11 +376,12 @@
   color: @black;
 
   font-size: 17px;
-  line-height: 1;
   font-weight: 700;
+  line-height: 1;
 
   @media @tablet {
     margin-right: 20px;
+    font-size: 19px;
   }
 }
 
@@ -358,14 +402,21 @@
   &--phone,
   &--email {
     height: 54px;
-    font-size: 19px;
     margin-bottom: 8px;
+
+    font-size: 19px;
   }
 
   @media @tablet {
+    height: 54px;
     padding-left: 18px;
 
     font-size: 19px;
+
+    &--phone,
+    &--email {
+      margin-bottom: 20px;
+    }
   }
 
   &:hover {
@@ -406,12 +457,20 @@
   right: 4px;
 
   fill: #cccccc;
+
+  @media @tablet {
+    right: 22px;
+  }
+
+  @media @desktop {
+    right: 5px;
+  }
 }
 
 .form__textarea {
-  margin-top: 15px;
   box-sizing: border-box;
   width: 100%;
+  margin-top: 15px;
   padding: 15px 15px;
 
   resize: none;
@@ -424,6 +483,7 @@
 
   @media @tablet {
     width: 75%;
+    margin-top: 0;
     max-width: 700px;
 
     font-size: 19px;
@@ -453,8 +513,8 @@
   }
 
   @media @desktop {
-    max-width: 700px;
-    margin-left: 19.565%;
+    width: 700px;
+    margin: 0 auto;
     padding: 0;
   }
 }
@@ -473,4 +533,8 @@
   width: 260px;
   margin: 0 0 15px;
   padding: 15px 0;
+
+  @media @tablet {
+    width: 230px;
+  }
 }
