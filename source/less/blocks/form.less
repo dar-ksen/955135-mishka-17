@@ -147,7 +147,7 @@
 .form__radio-input:checked + .form__radio-desc {
   &::after {
     position: absolute;
-    top: 8px;
+    top: 16px;
     left: 12px;
 
     width: 16px;
@@ -159,7 +159,7 @@
     background-color: @turquoise;
 
     @media @tablet {
-      top: 13px;
+      top: 12px;
       left: 16px;
 
       width: 20px;
@@ -204,7 +204,7 @@
 
   &::before {
     position: absolute;
-    top: -4px;
+    top: 4px;
     left: 0;
 
     box-sizing: border-box;
@@ -225,6 +225,7 @@
     font-size: 19px;
 
     &::before {
+      top: -4px;
       width: 52px;
       height: 52px;
     }
