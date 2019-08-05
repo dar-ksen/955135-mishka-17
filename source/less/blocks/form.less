@@ -186,6 +186,18 @@
       border-color: #c7c7c7;
     }
   }
+
+  &:disabled + .form__radio-desc {
+    color: @gray;
+
+    &::before {
+      border-color: @gray;
+    }
+
+    &::after {
+      background-color: @gray;
+    }
+  }
 }
 
 
@@ -292,6 +304,18 @@
   &:active + .form__checkbox-desc {
     &::before {
       border-color: #c7c7c7;
+    }
+  }
+
+  &:disabled + .form__checkbox-desc {
+    color: @gray;
+
+    &::before {
+      border-color: @gray;
+    }
+
+    &::after {
+      border-color: @gray;
     }
   }
 }
