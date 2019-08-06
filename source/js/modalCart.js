@@ -30,7 +30,6 @@ window.addEventListener('keydown', function (evt){
 });
 
 //main
-console.log(openModalCart);
 if (openModalCart) {
   openModalCart.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -39,7 +38,6 @@ if (openModalCart) {
 }
 
 //catalog
-console.log(cards);
 if (cards) {
   cards.addEventListener('click', function (evt) {
     var target = evt.target;

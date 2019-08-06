@@ -1,5 +1,6 @@
 .week-goods {
   position: relative;
+  z-index: 2;
 
   padding-top: 25px;
   padding-bottom: 40px;
@@ -180,6 +181,8 @@
   height: 315px;
   margin: 0 auto 20px;
 
+  background-color: @white--darken;
+
   @media @tablet {
     position: absolute;
     z-index: -1;
@@ -193,13 +196,11 @@
 
   @media @desktop {
     position: absolute;
-    z-index: -1;
     right: 50px;
     bottom: 100px;
 
     width: 525px;
     height: 636px;
-    margin: 0;
   }
 }
 
