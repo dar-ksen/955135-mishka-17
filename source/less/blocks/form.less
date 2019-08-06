@@ -29,14 +29,15 @@
 
   @media @desktop {
     width: 700px;
-    padding: 0;
     margin: 0 auto;
+    padding: 0;
   }
 }
 
 .form__block {
   margin: 0;
   padding: 0;
+
   border: none;
 
   @media @tablet {
@@ -70,14 +71,15 @@
 
 .form__block-wrap {
   box-sizing: border-box;
-  padding: 0 30px;
   max-width: 1150px;
   margin: 0 auto;
+  padding: 0 30px;
 
   @media @tablet {
-    padding: 0 50px;
     display: flex;
     align-items: baseline;
+
+    padding: 0 50px;
   }
 }
 
@@ -238,6 +240,7 @@
 
     &::before {
       top: -4px;
+
       width: 52px;
       height: 52px;
     }
@@ -251,13 +254,15 @@
   padding-bottom: 2px;
 
   @media @tablet {
-    width: 70%;
     justify-content: space-between;
+
+    width: 70%;
   }
 
   @media @desktop {
-    width: 75%;
     justify-content: flex-start;
+
+    width: 75%;
   }
 }
 
@@ -354,8 +359,8 @@
 
   @media @tablet {
     width: 200px;
-    margin-bottom: 12px;
     margin-right: 0;
+    margin-bottom: 12px;
     padding-left: 80px;
 
     font-size: 19px;
@@ -406,6 +411,7 @@
 
   @media @tablet {
     margin-right: 20px;
+
     font-size: 19px;
   }
 }
@@ -493,6 +499,8 @@
 }
 
 .form__textarea {
+  overflow: auto;
+
   box-sizing: border-box;
   width: 100%;
   margin-top: 15px;
@@ -508,8 +516,8 @@
 
   @media @tablet {
     width: 75%;
-    margin-top: 0;
     max-width: 700px;
+    margin-top: 0;
 
     font-size: 19px;
   }
