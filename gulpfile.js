@@ -15,16 +15,13 @@ var terser = require("gulp-terser");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var htmlmin = require("gulp-htmlmin");
-
 var del = require("del");
-
 var server = require("browser-sync").create();
 
 //Копировать ресурсы в папку build
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**"
   ], {base: "source"})
   .pipe(gulp.dest("build"));
 });
@@ -38,7 +35,7 @@ gulp.task("clean", function() {
 gulp.task("imagemin", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.optipng({optimizationLevel: 7}),
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
   ]))
@@ -78,9 +75,12 @@ gulp.task("css", function () {
 //Минифицировать js
 gulp.task("jsmin", function () {
   return gulp.src("source/js/*.js")
+  .pipe(sourcemap.init())
   .pipe(terser())
   .pipe(rename({suffix: ".min"}))
-  .pipe(gulp.dest("build/js"));
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("build/js"))
+  .pipe(server.stream());
 });
 
 //Собрать и минимизировать html
@@ -102,8 +102,9 @@ gulp.task("server", function () {
     ui: false
   });
 
+  gulp.watch("source/js/**/*.js", gulp.series("jsmin"));
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
 });
 
 gulp.task("build", gulp.series("clean", gulp.parallel("copy", "css", "jsmin", "imagemin", "webp", "sprite"), "html"));
