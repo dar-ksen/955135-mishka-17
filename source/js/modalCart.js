@@ -2,21 +2,21 @@
 const escCode = 27;
 
 var modalCart = document.querySelector('.modal-cart');
-var mist = document.querySelector('.mist');
+var overlay = document.querySelector('.overlay');
 var openModalCart = document.querySelector('.week-goods__btn');
 var cards = document.querySelector('.card-product');
 
 var modalOpen = function () {
   modalCart.classList.add('modal-cart--open');
-  mist.classList.add('mist--open');
+  overlay.classList.add('overlay--open');
 }
 
 var modalClose = function () {
   modalCart.classList.remove('modal-cart--open');
-  mist.classList.remove('mist--open');
+  overlay.classList.remove('overlay--open');
 }
 
-mist.addEventListener('click', function () {
+overlay.addEventListener('click', function () {
   modalClose();
 });
 

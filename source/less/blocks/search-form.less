@@ -54,15 +54,15 @@
   background-color: transparent;
 
   &:hover .search-form__img {
-    fill: #63d1bb;
+    fill: @turquoise;
   }
 
   &:focus .search-form__img {
-    fill: #63d1bb;
+    fill: @turquoise;
   }
 
   &:active .search-form__img {
-    fill: fade(#63d1bb, 30%);
+    fill: fade(@turquoise, 30%);
   }
 
   @media @tablet {
@@ -74,5 +74,5 @@
 .search-form__img {
   transition: 0.2s linear;
 
-  fill: #d3d2d2;
+  fill: @gray--lighten;
 }
