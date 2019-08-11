@@ -1,6 +1,6 @@
-let map;
-let image = 'img/icon-map-pin.svg';
-let mapContainer = document.querySelector('.contacts__map');
+var map;
+var image = 'img/icon-map-pin.svg';
+var mapContainer = document.querySelector('.contacts__map');
 
 mapContainer.classList.remove('contacts__map--nojs');
 
