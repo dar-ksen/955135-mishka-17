@@ -1,10 +1,14 @@
 'use strict';
 const escCode = 27;
 
+var body = document.body;
 var modalCart = document.querySelector('.modal-cart');
-var overlay = document.querySelector('.overlay');
 var openModalCart = document.querySelector('.week-goods__btn');
 var cards = document.querySelector('.card-product');
+
+var overlay = document.createElement('div');
+overlay.className = 'overlay';
+body.appendChild(overlay);
 
 var modalOpen = function () {
   modalCart.classList.add('modal-cart--open');
