@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Форма</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.min.js"></script>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
@@ -43,10 +44,11 @@
         <li class="main-nav__menu-item main-nav__menu-item--search">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <button class="search-form__btn" type="submit">
+              <span class="visually-hidden">Поиск</span>
               <svg class="search-form__img" width="18" height="19">
                 <use xlink:href="#icon-search"></use>
               </svg>
-          </button>
+            </button>
             <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
           </form>
         </li>
@@ -175,23 +177,27 @@
 
   <footer class="footer">
     <div class="footer__wrap">
-      <a class="footer__logo" href="index.html">
+      <a class="footer__logo" href="index.html" aria-label="Лототип футера">
+        <span class="visually-hidden">Логотип магазина «Мишка»</span>
         <svg class="footer__logo-image" width="102" height="34">
           <use xlink:href="#logo-footer"></use>
         </svg>
       </a>
       <div class="social">
-        <a class="social__link" href="https://www.instagram.com/htmlacademy">
+        <a class="social__link" href="https://www.instagram.com/htmlacademy" aria-label="Мишка в инстаграме">
+          <span class="visually-hidden">Мишка в инстаграме</span>
           <svg class="social__img" width="22" height="21">
             <use xlink:href="#icon-insta"></use>
           </svg>
         </a>
         <a class="social__link" href="https://www.facebook.com/htmlacademy">
+          <span class="visually-hidden">Мишка в фейсбуке</span>
           <svg class="social__img" width="15" height="28">
             <use xlink:href="#icon-fb"></use>
           </svg>
         </a>
-        <a class="social__link" href="https://twitter.com/htmlacademy_ru">
+        <a class="social__link" href="https://twitter.com/htmlacademy_ru" aria-label="Мишка в твиттере">
+          <span class="visually-hidden">Мишка в твиттере</span>
           <svg class="social__img" width="23" height="20">
             <use xlink:href="#icon-twitter"></use>
           </svg>
@@ -206,7 +212,8 @@
     </div>
   </footer>
 
-<script src="js/menu.min.js"></script>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/menu.min.js"></script>
 </body>
 
 </html>
