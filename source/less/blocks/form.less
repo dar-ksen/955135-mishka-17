@@ -99,6 +99,10 @@
   font-size: 17px;
   font-weight: 700;
 
+  &--feedback {
+    cursor: pointer;
+  }
+
   &::after {
     position: absolute;
     top: 50%;
@@ -210,6 +214,8 @@
 
   padding: 12px 0 12px 64px;
 
+  cursor: pointer;
+
   color: @black;
 
   font-size: 17px;
@@ -260,8 +266,6 @@
   }
 
   @media @desktop {
-    justify-content: flex-start;
-
     width: 75%;
   }
 }
@@ -333,8 +337,10 @@
   box-sizing: border-box;
   width: 175px;
   margin-top: 14px;
-  margin-right: auto;
+  margin-right: 30px;
   padding: 10px 0 10px 64px;
+
+  cursor: pointer;
 
   color: @black;
 
@@ -402,6 +408,8 @@
 
 .form__text-desc {
   position: relative;
+
+  cursor: pointer;
 
   color: @black;
 
@@ -555,6 +563,8 @@
 .form__submit-info {
   margin: 8px 0 30px;
 
+  text-align: center;
+
   font-size: 14px;
 
   @media @tablet {
@@ -564,10 +574,11 @@
 
 .form__submit-btn {
   width: 260px;
-  margin: 0 0 15px;
+  margin: 0 auto 15px;
   padding: 15px 0;
 
   @media @tablet {
     width: 230px;
+    margin: 0 0 15px;
   }
 }
